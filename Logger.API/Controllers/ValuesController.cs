@@ -41,4 +41,16 @@ public class ValuesController(ILogger<ValuesController> logger) : ControllerBase
 
         return Ok();
     }
+
+
+
+    [HttpGet]
+    public IActionResult TEST()
+    {
+        //GetAll
+        Log.Information("Starting creating");
+        Log.Information("Creating is finish");
+
+        return Ok();
+    }
 }
