@@ -1,0 +1,6 @@
+@ToFile.API_HostAddress = http://localhost:5161
+
+GET {{ToFile.API_HostAddress}}/
+Accept: application/json
+
+###
