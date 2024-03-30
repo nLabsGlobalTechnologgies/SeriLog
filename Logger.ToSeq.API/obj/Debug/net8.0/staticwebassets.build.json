@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "bIYzMEubXmbnYS6iWnE9t5eLRnI+TEgMJSOa9runQeQ=",
+  "Source": "Logger.ToSeq.API",
+  "BasePath": "_content/Logger.ToSeq.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -11,6 +11,7 @@ public class JwtProvider
     {
         List<Claim> claims = new()
         {
+            new Claim("UserId", "78e1929e-2029-4df5-a354-d1202fd8bc61"),
             new Claim(ClaimTypes.NameIdentifier, "CumaKose")
         };
 

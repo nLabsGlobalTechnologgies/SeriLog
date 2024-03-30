@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "iOuoz16neYZ/sR2+Dr8n8tW7kcF4u7DYS3LuE8lJ1XE=",
+  "Source": "Logger.ToMSSql.API",
+  "BasePath": "_content/Logger.ToMSSql.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

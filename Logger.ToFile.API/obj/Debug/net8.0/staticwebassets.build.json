@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "Zx3fnwGPgluQy+4JoegUD8QgJ3jpCfNiTbxBc+eeZCE=",
+  "Source": "Logger.ToFile.API",
+  "BasePath": "_content/Logger.ToFile.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,5 +1,6 @@
 ﻿using Logger.ToSeq.API.Context;
 using Logger.ToSeq.API.DTOs;
+using Logger.ToSeq.API.Filters;
 using Logger.ToSeq.API.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -21,6 +22,7 @@ public class ProductsController(AppDbContext context) : ControllerBase
     }
 
     [HttpPost]
+    [LogFilter(TableName = "Product")]
     public async Task<IActionResult> Create(ProductDto request, CancellationToken cancellationToken = default)
     {
         var product = new Product()

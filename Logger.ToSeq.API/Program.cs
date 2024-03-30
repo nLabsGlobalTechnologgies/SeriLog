@@ -1,5 +1,4 @@
 ﻿using Logger.ToSeq.API.Context;
-using Logger.ToSeq.API.Filters;
 using Logger.ToSeq.API.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
@@ -13,10 +12,8 @@ using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 
 builder.Services.AddSingleton<JwtProvider>();
-builder.Services.AddSingleton<LogFilterAttribute>();
 
 builder.Services.AddAuthentication().AddJwtBearer(options =>
 {
@@ -51,7 +48,7 @@ builder.Services.AddAuthorizationBuilder();
 
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(setup =>
 {
@@ -81,7 +78,7 @@ builder.Services.AddSwaggerGen(setup =>
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -105,7 +102,7 @@ app.Use(async (context, next) =>
             Path = context.Request.Path
         };
 
-        //db'ye kay�t
+        //save to db
 
 
         context.Response.StatusCode = 500;
@@ -123,8 +120,6 @@ app.UseHttpsRedirection();
 app.UseSerilogRequestLogging();
 
 app.UseAuthorization();
-
-//app.MapControllers();
 
 app.MapControllers().RequireAuthorization(options =>
     {
